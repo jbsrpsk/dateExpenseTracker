@@ -8,3 +8,15 @@ type MovieType =
     | RegularWithSnacks
     | IMAXWithSnacks
     | DBOXWithSnacks
+type Genre =
+    | Action
+    | Comedy
+    | Drama
+    | SciFi
+
+type Activity =
+    | BoardGame
+    | Chill
+    | Movie of Genre
+    | Restaurant of Cuisine
+    | LongDrive of int * float
