@@ -42,3 +42,6 @@ let calculateTotalBudget activities =
 let printTotalBudget totalBudget =
     printfn "Budget for the day: %.2f CAD" totalBudget
 
+let activities = [BoardGame; Movie Action; Restaurant Korean; LongDrive (100, 0.12)]
+let totalBudget = calculateTotalBudget activities
+printTotalBudget totalBudget
