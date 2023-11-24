@@ -1,6 +1,7 @@
 ﻿type Cuisine =
     | Korean
     | Turkish
+
 type MovieType =
     | Regular
     | IMAX
@@ -8,6 +9,7 @@ type MovieType =
     | RegularWithSnacks
     | IMAXWithSnacks
     | DBOXWithSnacks
+
 type Genre =
     | Action
     | Comedy
@@ -17,18 +19,21 @@ type Genre =
 type Activity =
     | BoardGame
     | Chill
-    | Movie of Genre
+    | Movie of Genre * MovieType 
     | Restaurant of Cuisine
     | LongDrive of int * float
-
 
 let calculateBudget (activity: Activity) =
     match activity with
     | BoardGame | Chill -> 0.0
-    | Movie genre ->
+    | Movie (genre, movieType) ->
         match genre with
         | Action | Comedy | Drama -> 12.0
-        | SciFi -> 17.0
+        | SciFi ->
+            match movieType with
+            | Regular -> 12.0
+            | IMAX -> 17.0
+            | DBOX -> 20.0
     | Restaurant cuisine ->
         match cuisine with
         | Korean -> 70.0
@@ -42,6 +47,6 @@ let calculateTotalBudget activities =
 let printTotalBudget totalBudget =
     printfn "Budget for the day: %.2f CAD" totalBudget
 
-let activities = [BoardGame; Movie Action; Restaurant Korean; LongDrive (100, 0.12)]
+let activities = [BoardGame; Movie (Comedy, IMAX); Restaurant Turkish; LongDrive (200, 0.42)]
 let totalBudget = calculateTotalBudget activities
 printTotalBudget totalBudget
