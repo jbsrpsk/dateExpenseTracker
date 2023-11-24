@@ -39,3 +39,6 @@ let calculateTotalBudget activities =
     activities
     |> List.sumBy calculateBudget
 
+let printTotalBudget totalBudget =
+    printfn "Budget for the day: %.2f CAD" totalBudget
+
