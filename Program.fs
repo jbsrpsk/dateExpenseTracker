@@ -1,0 +1,3 @@
+﻿type Cuisine =
+    | Korean
+    | Turkish

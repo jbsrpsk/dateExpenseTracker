@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "0/KYDHvtUo6RiCl4T6aoHsJJTyu4en2LQcxC+J4ONIhKdY29ux+/NFNxCZfEsmk3ocmcJli1o2lfi+JO/HLwUg==",
+  "success": true,
+  "projectFilePath": "/Users/jangbusherpa/pp/lab2fsharp/lab2fsharp.fsproj",
+  "expectedPackageFiles": [
+    "/Users/jangbusherpa/.nuget/packages/fsharp.core/7.0.401/fsharp.core.7.0.401.nupkg.sha512"
+  ],
+  "logs": []
+}
